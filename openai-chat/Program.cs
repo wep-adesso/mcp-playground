@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using OpenAI.Chat;
 
 try
 {
@@ -13,13 +14,13 @@ try
         throw new InvalidOperationException("No valid OpenAi API key configured. Please set a valid key using .NET user-secrets.");
     }
 
+    var client = new ChatClient(model: "gpt-3.5-turbo", apiKey: apiKey);
+
     Console.ForegroundColor = ConsoleColor.Cyan;
-    Console.WriteLine("Hi, I am ChatGpt, please ask me anything!");
+    Console.WriteLine("Hi, I am ChatGPT, please ask me anything!");
 
     while (true)
     {
-        //using var client = new AnthropicClient(apiKey);
-
         Console.ForegroundColor = ConsoleColor.DarkGreen;
         Console.Write("You: ");
         var userInput = Console.ReadLine();
@@ -30,26 +31,15 @@ try
             continue;
         }
 
-        /*var messageParams = new CreateMessageParams()
-        {
-            Model = new Model(ModelVariant6.ClaudeSonnet420250514),
-            Messages = [
-                new InputMessage(){
-                    Role = InputMessageRole.User,
-                    Content = userInput
-                },
-            ],
-            MaxTokens = 250
-        };
-        var response = await client.Messages.MessagesPostAsync(messageParams);
+        var chatCompletion = await client.CompleteChatAsync(userInput);
 
         Console.ForegroundColor = ConsoleColor.DarkBlue;
-        Console.WriteLine($"Claude: {response.AsSimpleText()}");*/
-
+        Console.WriteLine($"ChatGPT: {chatCompletion.Value.Content.FirstOrDefault()?.Text}");
     }
 }
 catch (Exception ex)
 {
     Console.ForegroundColor = ConsoleColor.DarkRed;
     Console.WriteLine($"An error occurred: {ex.Message}");
+    Console.ReadLine();
 }

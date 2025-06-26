@@ -53,4 +53,5 @@ catch (Exception ex)
 {
     Console.ForegroundColor = ConsoleColor.DarkRed;
     Console.WriteLine($"An error occurred: {ex.Message}");
+    Console.ReadLine();
 }
