@@ -10,7 +10,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/claude-chat/bin/Debug/net8.0",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "integratedTerminal"
         },
         {
             "name": "Launch Claude Chat (Release)",
@@ -21,7 +21,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/claude-chat/bin/Release/net8.0",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "integratedTerminal"
         },
         {
             "name": "Launch OpenAI Chat (Debug)",
@@ -32,7 +32,7 @@
             "args": [],
             "cwd": "${workspaceFolder}/openai-chat/bin/Debug/net8.0",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "integratedTerminal"
         },
         {
             "name": "Launch OpenAI Chat (Release)",
@@ -43,7 +43,29 @@
             "args": [],
             "cwd": "${workspaceFolder}/openai-chat/bin/Release/net8.0",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch Gemini Chat (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:debug",
+            "program": "${workspaceFolder}/gemini-chat/bin/Debug/net8.0/gemini-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/gemini-chat/bin/Debug/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch Gemini Chat (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:release",
+            "program": "${workspaceFolder}/gemini-chat/bin/Release/net8.0/gemini-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/gemini-chat/bin/Release/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
         }
     ]
 }

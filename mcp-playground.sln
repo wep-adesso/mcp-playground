@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "claude-chat", "claude-chat\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai-chat", "openai-chat\openai-chat.csproj", "{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gemini-chat", "gemini-chat\gemini-chat.csproj", "{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
