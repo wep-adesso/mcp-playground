@@ -6,10 +6,12 @@
     <RootNamespace>claude_chat</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <UserSecretsId>2b9e5a90-3e5d-4c3c-b8d0-cff864137b2e</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Anthropic" Version="3.7.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.6" />
   </ItemGroup>
 
 </Project>

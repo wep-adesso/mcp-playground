@@ -1,15 +1,25 @@
 ﻿using Anthropic;
+using Microsoft.Extensions.Configuration;
 
-
-        Console.ForegroundColor = ConsoleColor.Cyan; 
-        Console.WriteLine("Hi, I am Claude, please ask me anything!");
-        
-while (true)
+try
 {
+    var config = new ConfigurationBuilder()
+        .AddUserSecrets<Program>()
+        .Build();
 
-    try
+    var apiKey = config["Anthropic:ApiKey"];
+
+    if (string.IsNullOrWhiteSpace(apiKey) || apiKey == "your-anthropic-api-key")
     {
-        using var client = new AnthropicClient("");
+        throw new InvalidOperationException("No valid Anthropic API key configured. Please set a valid key using .NET user-secrets.");
+    }
+
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("Hi, I am Claude, please ask me anything!");
+
+    while (true)
+    {
+        using var client = new AnthropicClient(apiKey);
 
         Console.ForegroundColor = ConsoleColor.DarkGreen;
         Console.Write("You: ");
@@ -36,10 +46,11 @@ while (true)
 
         Console.ForegroundColor = ConsoleColor.DarkBlue;
         Console.WriteLine($"Claude: {response.AsSimpleText()}");
+
     }
-    catch (Exception ex)
-    {
-        Console.ForegroundColor = ConsoleColor.DarkRed;
-        Console.WriteLine($"An error occurred: {ex.Message}");
-    }
+}
+catch (Exception ex)
+{
+    Console.ForegroundColor = ConsoleColor.DarkRed;
+    Console.WriteLine($"An error occurred: {ex.Message}");
 }
