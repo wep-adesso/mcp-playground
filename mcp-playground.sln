@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai-chat", "openai-chat\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gemini-chat", "gemini-chat\gemini-chat.csproj", "{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mcp-server", "mcp-server\mcp-server.csproj", "{79E668DC-6ED9-4609-BC95-EE4BF84FD382}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A957E2E0-66CA-44FB-8FE9-6AB6749DBB39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79E668DC-6ED9-4609-BC95-EE4BF84FD382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79E668DC-6ED9-4609-BC95-EE4BF84FD382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79E668DC-6ED9-4609-BC95-EE4BF84FD382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79E668DC-6ED9-4609-BC95-EE4BF84FD382}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

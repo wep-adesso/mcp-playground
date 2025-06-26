@@ -66,6 +66,28 @@
             "cwd": "${workspaceFolder}/gemini-chat/bin/Release/net8.0",
             "stopAtEntry": false,
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch MCP Server (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:debug",
+            "program": "${workspaceFolder}/mcp-server/bin/Debug/net8.0/mcp-server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/mcp-server/bin/Debug/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch MCP Server (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:release",
+            "program": "${workspaceFolder}/mcp-server/bin/Release/net8.0/mcp-server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/mcp-server/bin/Release/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
         }
     ]
 }
