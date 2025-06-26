@@ -1,11 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Text.Json;
-
-// TODO: Set your Gemini API key using .NET user-secrets or environment variable
-// and update the endpoint if needed.
+using Gemini;
+using GeminiDotNET;
+using GeminiDotNET.ApiModels.Enums;
 
 try
 {
@@ -22,10 +18,7 @@ try
     Console.ForegroundColor = ConsoleColor.Cyan;
     Console.WriteLine("Hi, I am Gemini, please ask me anything!");
 
-    using var httpClient = new HttpClient();
-    httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiKey);
-
-    var endpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent";
+    var generator = new Generator(apiKey);
 
     while (true)
     {
@@ -39,36 +32,15 @@ try
             continue;
         }
 
-        var requestBody = new
-        {
-            contents = new[]
-            {
-                new { parts = new[] { new { text = userInput } } }
-            }
-        };
-        var json = JsonSerializer.Serialize(requestBody);
-        var content = new StringContent(json, Encoding.UTF8, "application/json");
+        var request = new ApiRequestBuilder()
+       .WithPrompt(userInput)
+       .WithDefaultGenerationConfig(temperature: 0.7f, maxOutputTokens: 512) // Optional configuration
+       .Build();
 
-        var response = await httpClient.PostAsync(endpoint + "?key=" + apiKey, content);
-        var responseString = await response.Content.ReadAsStringAsync();
-
-        if (!response.IsSuccessStatusCode)
-        {
-            Console.ForegroundColor = ConsoleColor.DarkRed;
-            Console.WriteLine($"Error: {response.StatusCode}\n{responseString}");
-            continue;
-        }
-
-        // Parse and print the Gemini response
-        using var doc = JsonDocument.Parse(responseString);
-        var text = doc.RootElement
-            .GetProperty("candidates")[0]
-            .GetProperty("content")
-            .GetProperty("parts")[0]
-            .GetProperty("text").GetString();
+        var response = await generator.GenerateContentAsync(request, ModelVersion.Gemini_20_Flash_Lite);
 
         Console.ForegroundColor = ConsoleColor.DarkBlue;
-        Console.WriteLine($"Gemini: {text}");
+        Console.WriteLine($"Gemini: {response.Content}");
     }
 }
 catch (Exception ex)
