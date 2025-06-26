@@ -22,6 +22,28 @@
             "cwd": "${workspaceFolder}/claude-chat/bin/Release/net8.0",
             "stopAtEntry": false,
             "console": "internalConsole"
+        },
+        {
+            "name": "Launch OpenAI Chat (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:debug",
+            "program": "${workspaceFolder}/openai-chat/bin/Debug/net8.0/openai-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/openai-chat/bin/Debug/net8.0",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Launch OpenAI Chat (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:release",
+            "program": "${workspaceFolder}/openai-chat/bin/Release/net8.0/openai-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/openai-chat/bin/Release/net8.0",
+            "stopAtEntry": false,
+            "console": "internalConsole"
         }
     ]
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "claude-chat", "claude-chat\claude-chat.csproj", "{C541C03A-DD40-4EEE-BD48-CA59E33BC70E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "openai-chat", "openai-chat\openai-chat.csproj", "{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{C541C03A-DD40-4EEE-BD48-CA59E33BC70E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C541C03A-DD40-4EEE-BD48-CA59E33BC70E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C541C03A-DD40-4EEE-BD48-CA59E33BC70E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8B00771-CA5E-4E52-8E48-AD055E6A8A9B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
