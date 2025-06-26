@@ -1,0 +1,14 @@
+C:\Repos\mcp-playground\claude-chat\bin\Debug\net8.0\claude-chat.exe
+C:\Repos\mcp-playground\claude-chat\bin\Debug\net8.0\claude-chat.deps.json
+C:\Repos\mcp-playground\claude-chat\bin\Debug\net8.0\claude-chat.runtimeconfig.json
+C:\Repos\mcp-playground\claude-chat\bin\Debug\net8.0\claude-chat.dll
+C:\Repos\mcp-playground\claude-chat\bin\Debug\net8.0\claude-chat.pdb
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.AssemblyInfoInputs.cache
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.AssemblyInfo.cs
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.csproj.CoreCompileInputs.cache
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.dll
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\refint\claude-chat.dll
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.pdb
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\claude-chat.genruntimeconfig.cache
+C:\Repos\mcp-playground\claude-chat\obj\Debug\net8.0\ref\claude-chat.dll

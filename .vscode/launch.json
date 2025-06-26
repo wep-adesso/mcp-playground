@@ -1,0 +1,27 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Claude Chat (Debug)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:debug",
+            "program": "${workspaceFolder}/claude-chat/bin/Debug/net8.0/claude-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/claude-chat/bin/Debug/net8.0",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Launch Claude Chat (Release)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build:release",
+            "program": "${workspaceFolder}/claude-chat/bin/Release/net8.0/claude-chat.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/claude-chat/bin/Release/net8.0",
+            "stopAtEntry": false,
+            "console": "internalConsole"
+        }
+    ]
+}
