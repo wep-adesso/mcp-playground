@@ -14,6 +14,25 @@
 			"command": "dotnet build -c Release",
 			"group": "build",
 			"problemMatcher": ["$msCompile"]
+		},
+		{
+			"label": "start:mcp-inspector",
+			"type": "shell",
+			"command": "npx @modelcontextprotocol/inspector",
+			"problemMatcher": {
+				"pattern": {
+					"regexp": ".*",
+					"file": 1,
+					"location": 2,
+					"message": 0
+				},
+				"background": {
+					"activeOnStart": true,
+					"beginsPattern": ".*",
+					"endsPattern": ".*Inspector listening.*"
+				}
+			},
+			"isBackground": true
 		}
 	]
 }

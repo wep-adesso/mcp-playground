@@ -88,6 +88,28 @@
             "cwd": "${workspaceFolder}/mcp-server/bin/Release/net8.0",
             "stopAtEntry": false,
             "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch MCP Server with Inspector (Debug, Task)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "start:mcp-inspector",
+            "program": "${workspaceFolder}/mcp-server/bin/Debug/net8.0/mcp-server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/mcp-server/bin/Debug/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Launch MCP Server with Inspector (Release, Task)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "start:mcp-inspector",
+            "program": "${workspaceFolder}/mcp-server/bin/Release/net8.0/mcp-server.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/mcp-server/bin/Release/net8.0",
+            "stopAtEntry": false,
+            "console": "integratedTerminal"
         }
     ]
 }
